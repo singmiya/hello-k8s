@@ -10,4 +10,4 @@ ENV TimeZone=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TimeZone /etc/localtime && echo $TimeZone > /etc/timezone
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk add --update font-adobe-100dpi ttf-dejavu fontconfig
-ENTRYPOINT ["java","-cp","app:app/lib/*","com.ronfton.commsso.HelloK8sApplication"]
+ENTRYPOINT ["java","-cp","app:app/lib/*","com.singsmiya.hellok8s.HelloK8sApplication"]
